@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/greek/kerkis
+# catalog-date 2009-01-15 17:16:29 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-kerkis
 Version:	20090115
 Release:	1
@@ -302,6 +308,7 @@ Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 %{_texmfdistdir}/tex/latex/kerkis/t1maksf.fd
 %doc %{_texmfdistdir}/doc/latex/kerkis/License.txt
 %doc %{_texmfdistdir}/doc/latex/kerkis/README.html
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -312,3 +319,5 @@ Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
