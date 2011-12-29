@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Sans-serif Greek fonts to match the URW Bookman set (which are
@@ -31,20 +29,12 @@ mathematics; small caps and old-style number glyphs are also
 available. The philosophy, and the design process, of the
 Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -309,7 +299,6 @@ Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 %{_texmfdistdir}/tex/latex/kerkis/t1maksf.fd
 %doc %{_texmfdistdir}/doc/latex/kerkis/License.txt
 %doc %{_texmfdistdir}/doc/latex/kerkis/README.html
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -320,5 +309,3 @@ Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
