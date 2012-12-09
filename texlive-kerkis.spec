@@ -309,3 +309,17 @@ Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090115-2
++ Revision: 752981
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090115-1
++ Revision: 718770
+- texlive-kerkis
+- texlive-kerkis
+- texlive-kerkis
+- texlive-kerkis
+
