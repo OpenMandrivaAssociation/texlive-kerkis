@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-kerkis
-Version:	20090115
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Kerkis (Greek) font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/kerkis
