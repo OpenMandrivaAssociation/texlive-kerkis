@@ -1,5 +1,5 @@
 Name:		texlive-kerkis
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Kerkis (Greek) font family
 Group:		Publishing
