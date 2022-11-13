@@ -1,12 +1,12 @@
 Name:		texlive-kerkis
-Version:	20190228
+Version:	56271
 Release:	1
 Summary:	Kerkis (Greek) font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/kerkis
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,27 +24,28 @@ available. The philosophy, and the design process, of the
 Kerkis fonts is discussed in a paper in TUGboat 23(3/4), 2002.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/fonts/afm/public/kerkis
 %{_texmfdistdir}/fonts/enc/dvips/kerkis
 %{_texmfdistdir}/fonts/map/dvips/kerkis
+%{_texmfdistdir}/fonts/opentype/public/kerkis
 %{_texmfdistdir}/fonts/tfm/public/kerkis
 %{_texmfdistdir}/fonts/type1/public/kerkis
 %{_texmfdistdir}/fonts/vf/public/kerkis
 %{_texmfdistdir}/tex/latex/kerkis
-%doc %{_texmfdistdir}/doc/latex/kerkis
+%doc %{_texmfdistdir}/doc/fonts/kerkis
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
