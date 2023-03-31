@@ -1,6 +1,6 @@
 Name:		texlive-kerkis
 Version:	56271
-Release:	1
+Release:	2
 Summary:	Kerkis (Greek) font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/kerkis
