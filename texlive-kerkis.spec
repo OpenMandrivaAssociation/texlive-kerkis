@@ -3,7 +3,7 @@ Version:	56271
 Release:	2
 Summary:	Kerkis (Greek) font family
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/kerkis
+URL:		https://www.ctan.org/tex-archive/fonts/greek/kerkis
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kerkis.doc.r%{version}.tar.xz
